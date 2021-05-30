@@ -9,11 +9,9 @@ import React,{ useState } from "react";
 function App() {
   const [inputValues, setinputValues] = useState("");
 
-  var load=true;
+  // {"text":"Sakhar 1kg 72,etc","total":780}
+
   const previousList=[
-              {"text":"Sakhar 1kg 72,etc","total":780},
-              {"text":"Sakhar 1kg 72,etc","total":780},
-              {"text":"Sakhar 1kg 72,etc","total":780}
             ];
 
   const [valList, setPreviousList] = useState(previousList);
@@ -22,18 +20,16 @@ function handleChange() {
              
               var item={}
               item["text"]=inputValues;
-              
               item["total"]=processInput(inputValues);
-
-              console.log("Initial Values: ",...valList);
-
               let tempList=[...valList];
 
               tempList.push(item);
-              console.log("TempList is: ",tempList);
+              
               setPreviousList(tempList);
 
-              console.log("item need to push: ",item,valList);
+              setinputValues("");
+
+              
             };
 
 function processInput(expression){
@@ -70,11 +66,16 @@ return sum;
       </div>
         <div className="inputClass" >
       <div> 
+      <div className="previousListCard" ><p>Example:</p>
+                                    <p>Receipt No: _ </p>
+                                    <p> Content:Sakhar 1kg 72,etc </p>
+                                    <p>Total : 780 Rs</p>
+      </div>
         {
                                 valList.map((val, index) => {
                                 return (
                                   <div className="previousListCard" >
-                                    <p>{index}:</p>
+                                    <p>Receipt No: {index}</p>
                                     <p> Content:  {val.text}</p>
                                     <p>Total : {val.total}</p>
                                   </div>
@@ -86,7 +87,7 @@ return sum;
       </div>
 
       
-      <input
+      <textarea
                   type="text"
                   className="input"
                   placeholder="Enter items name and Rate"
@@ -99,7 +100,7 @@ return sum;
         <button type="submit" onClick={handleChange}>Calculate</button>
      </div>
     
-     <p>Note: Write in the format like Sugar 36rs, Oil 30rs </p>
+     <p>Note: Write Rupees in the format like 36rs, Oil 30rs </p>
 
      </div>
     </div>

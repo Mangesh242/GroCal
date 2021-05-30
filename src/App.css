@@ -13,7 +13,7 @@
 }
 
 .container{
-  border: 2px solid black;
+  
   height: 100vh;
   padding: 20px;
 }
@@ -30,4 +30,14 @@
 .previousListCard{
   background-color: rgb(213, 236, 213);
   border-radius: 4px;
+}
+textarea{
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  min-height: 60px;
+  overflow: auto;
+}
+textarea:focus{
+  outline: none;
 }
