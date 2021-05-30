@@ -1,38 +1,33 @@
-.App {
+.inputClass{
+  padding: 10px;
+
+}
+
+.headerName{
   text-align: center;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(121, 155, 115);
+  font-size: 25px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  border: 2px solid black;
+  height: 100vh;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerContainer{
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calculateButton{
+  padding: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.previousListCard{
+  background-color: rgb(213, 236, 213);
+  border-radius: 4px;
 }
