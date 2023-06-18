@@ -1,16 +1,9 @@
 
 import './App.css';
 import React,{ useState } from "react";
-// import LinkedStateMixin from 'react-addons-linked-state-mixin';
-
-
-
 
 function App() {
   const [inputValues, setinputValues] = useState("");
-
-  // {"text":"Sakhar 1kg 72,etc","total":780}
-
   const previousList=[
             ];
 
